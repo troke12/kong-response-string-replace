@@ -1,5 +1,5 @@
 package = "kong-response-string-replace"
-version = "1.0.0"
+version = "1.0.0-0"
 source = {
     url = "git://github.com/troke12/kong-response-string-replace",
     branch = "master"

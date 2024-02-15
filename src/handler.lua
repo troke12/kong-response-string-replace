@@ -17,7 +17,7 @@ local brotli_decoder = brotlidec:new()
 
 -- local HttpFilterHandler = BasePlugin:extend() deprecated
 local HttpFilterHandler = {
-  VERSION = "1.0.0",
+  VERSION = "1.0.0-0",
   PRIORITY = 1250
 }
 
