@@ -1,4 +1,4 @@
-local BasePlugin = require "kong.plugins.base_plugin"
+-- local BasePlugin = require "kong.plugins.base_plugin" deprecated
 local replacements = require "kong.plugins.kong-response-string-replace.replacements"
 local compression = require "kong.plugins.kong-response-string-replace.compression"
 local brotlienc = require "brotli.encoder"
@@ -15,12 +15,16 @@ local brotli_encoder = brotlienc:new()
 local brotli_decoder = brotlidec:new()
 
 
-local HttpFilterHandler = BasePlugin:extend()
+-- local HttpFilterHandler = BasePlugin:extend() deprecated
+local HttpFilterHandler = {
+  VERSION = "1.0.0",
+  PRIORITY = 1250
+}
 
 
 -- handle redirect after ip-restriction, bot-detection, cors - but before jwt and other authentication plugins
 -- see https://docs.konghq.com/0.14.x/plugin-development/custom-logic/
-HttpFilterHandler.PRIORITY = 1250
+-- HttpFilterHandler.PRIORITY = 1250 (it will automatically updated to arrays)
 
 
 function HttpFilterHandler:new()

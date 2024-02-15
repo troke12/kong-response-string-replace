@@ -1,7 +1,7 @@
 package = "kong-response-string-replace"
-version = "1.0.1-0"
+version = "1.0.0"
 source = {
-    url = "git://github.com/dsteinkopf/kong-response-string-replace",
+    url = "git://github.com/troke12/kong-response-string-replace",
     branch = "master"
 }
 description = {
@@ -9,7 +9,7 @@ description = {
     detailed = [[
       Find and replace patterns in the response stream.
     ]],
-    homepage = "https://github.com/dsteinkopf/kong-response-string-replace",
+    homepage = "https://github.com/troke12/kong-response-string-replace",
     license = "MIT"
 }
 dependencies = {
