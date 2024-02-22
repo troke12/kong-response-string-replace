@@ -11,9 +11,9 @@ end
 return {
   name = "kong-response-string-replace",
   fields = {
-    { content_types = { type = "array", default = {} } },
-    { uri_patterns = { type = "array", default = {} } },
-    { body_replace_patterns = { type = "array", default = {}, func = check_for_replace_pattern } },
-    { header_replace_patterns = { type = "array", default = {}, func = check_for_replace_pattern } }
+    { content_types = { type = "array", elements = { type = "string" }, default = {} } },
+    { uri_patterns = { type = "array", elements = { type = "string" }, default = {} } },
+    { body_replace_patterns = { type = "array", elements = { type = "string" }, default = {}, func = check_for_replace_pattern } },
+    { header_replace_patterns = { type = "array", elements = { type = "string" }, default = {}, func = check_for_replace_pattern } }
   }
 }
